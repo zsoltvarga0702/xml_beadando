@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="APIK">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="API" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="API">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="VERSION" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="VERSION">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="INFO" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="updated" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="INFO">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="X-LOGO" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="X-LOGO">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="BACKGROUND-COLOR" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="URL" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="BACKGROUND-COLOR">
+        <xs:complexType>
+            <xs:attribute name="backgroundColor" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="URL">
+        <xs:complexType>
+            <xs:attribute name="url" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

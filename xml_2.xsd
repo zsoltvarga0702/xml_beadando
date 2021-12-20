@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="APIK">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="API" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="apiNums" type="xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="API">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="VERSIONS" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="VERSIONS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="VERSION" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="versionNum" type="xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="VERSION">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ADDED">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="INFO">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="CONTACT">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="TITLE" minOccurs="0" maxOccurs="unbounded"/>
+                                                    <xs:element name="EMAIL" minOccurs="0" maxOccurs="unbounded"/>
+                                                    <xs:element name="URL" minOccurs="0" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="releaseDate" type="xs:dateTime"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,63 @@
+body {
+    background: white;
+}
+body img {
+    height: 18px;
+    width: 18px;
+    padding-right: 8px;
+}
+body a {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    text-align: center;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body div.text {
+    color: white;
+    font-size: 12px;
+}
+body div.title-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+body div.wrapper {
+    border-radius: 25px;
+    background: black;
+    width: 100%;
+    max-width: 640px;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 11px;
+    margin: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body div.container {
+    background: transparent;
+    height: fit-content;
+    display: grid;
+}
+body div.versions {
+    margin-top: 16px;
+    display: grid;
+    margin-left: auto;
+    width: fit-content;
+    text-align: right;
+}
+body div.footer {
+    border-top: 1px solid white;
+    padding-top: 8px;
+}
+body div.contact {
+    width: fit-content;
+}
