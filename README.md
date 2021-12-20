@@ -955,7 +955,7 @@ return validate {
 ```
 
 **Eredmény:**
-```json
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <APIK>
     <API name="amentum.space:aviation_radiation">
