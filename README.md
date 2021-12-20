@@ -77,7 +77,7 @@ return fn:concat(fn:concat($json?versions?*?info[$max eq fn:string-length(?descr
 "viator.com: 252226"
 ```
 
-**5. lekérdezés:**
+**3. lekérdezés:**
 Adjunk vissza egy tömböt, melyben azoknak az apinak a neve és szolgáltatás neve (ha van ilyen)
     található, melyeknek a leírása hosszabb mint 15.000 karakter
     
@@ -163,7 +163,7 @@ return
 **Eredmény:**
 ```json
 "{\"2019\":\"192 darab\",\"2020\":\"571 darab\",\"2021\":\"627 darab\"}"
-``
+```
 
 **6. lekérdezés:**
 Listázzuk ki azoknak az apiknak a címét élesítés dátumát és verziószámát
